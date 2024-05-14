@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import { DatePicker } from "npm-package-dummy";
+import { DatePicker } from "@vj97/react-date-picker";
+
+import "@vj97/react-date-picker/dist/style.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <h2>React Date Picker Demo</h2>
+
+        <h5>Instalation</h5>
+        <p>npm i @vj97/react-date-picker</p>
+
+        <p className="heading">Single Date Selection</p>
+        <DatePicker
+          containerStyle={{ width: "325px" }}
+          placeholder="Select date"
+          selectionType="single"
+        />
+        <p className="heading">Date Range Selection (Absolute)</p>
+        <DatePicker
+          containerStyle={{ width: "325px" }}
+          placeholder="Select date"
+          selectionType="range"
+        />
+        <p className="heading">Date Range Selection (Relative)</p>
+        <DatePicker
+          containerStyle={{ width: "325px" }}
+          placeholder="Select date"
+          selectionType="range"
+          defaultPickerType="relative"
+        />
+      </div>
     </div>
   );
 }
